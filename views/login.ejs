@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title><%= title %></title>
+    <style>
+        body {
+        overflow: hidden; /* Hide scrollbars */
+      }
+        .body-design{
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+         
+          background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      }
+      td {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(58, 229, 203);
+      }
+      
+      li {
+        float: left;
+      }
+      
+      form{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      form{
+        color: white;
+      }
+      
+      li a:hover {
+        background-color: rgb(11, 153, 235);
+      }
+      
+      </style>
+</head>
+<body class="body-design">
+    <h1> Sign In Page </h1>
+    <div class="container" [class]="body"> 
+        <form action="/createsession" method="post">
+           <div>Email:</div> <input type="email" name="email" placeholder="Enter your email " required style="outline: none;">
+           <div>Password:</div> <input type="password" name="password" placeholder="Enter your password" required style="outline: none;">
+           
+           <button type="submit"> Sign In </button>
+        </form>
+    </div>
+
+    <br>
+    <hr>
+    <div class="container" style="text-decoration: none;"><button><a href="/signup">Register/SignUp</a></button></div>
+
+
+
+
+    <div style="margin-bottom: 0;"><h1 style="font: size 2px; font-weight:bolder;color:aliceblue">Made by Riya Pramanick</h1></div>
+    
+</body>
+</html>

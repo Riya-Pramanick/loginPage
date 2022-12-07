@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> <%= title %> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+          body {
+          overflow: hidden; /* Hide scrollbars */
+        }
+          .body-design{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           
+            background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        }
+        td {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(58, 229, 203);
+        }
+        
+        li {
+          float: left;
+        }
+        
+        form{
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        form{
+          color: white;
+        }
+        
+        li a:hover {
+          background-color: rgb(11, 153, 235);
+        }
+        
+        </style>
+    </head>
+    <body class="body-design">
+        <div>
+            <h1>Welcome to Cointab </h1>
+        </div>
+        <div class="container">
+            <form action="/logout" method="post">
+            <button type="submit" class="btn btn-sm btn-primary">LOG OUT</button><br/><br/>
+            </form>
+            <table class="table table-blue table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>User ID </th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                      <tr>
+                          <td> <%= user.id %> </td>
+                          <td> <%= user.email %> </td>
+                      </tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="margin-top: auto;"><h1 style="font: size 2px; font-weight:bolder;color:aliceblue">Made by Riya Pramanick</h1></div>
+    
+    </body>
+</html>
